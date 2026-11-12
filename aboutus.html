@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Cells</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="shortcut icon" href="image/braincells.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #faf6f2;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+
+         .navbar {
+            background-color: #174c3c;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand:hover {
+            color: #dceee3;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #a9d7b9;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #174c3c;
+            border: 1px solid #527d68;
+            border-radius: 8px;
+        }
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #347b5c;
+            color: white;
+        }
+
+        .banner {
+            background-color: #174c3c;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .team {
+            text-align: center;
+            padding: 40px;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .carousel-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .carousel-item img {
+            height: 250px;
+            object-fit: contain;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #347b5c;
+            border-radius: 50%;
+        }
+
+        .accordion-button {
+            background-color: #dceee3;
+            color:#174c3c;
+            font-weight: bold;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color:#347b5c;
+            color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            background-color: #faf6f2;
+        }
+
+         .caresafe-footer {
+            background-color: #174C3C;
+            color: white;
+            padding: 45px 0 15px;
+            margin-top: 50px;
+        }
+
+        .caresafe-footer h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer p {
+            color: #DCEDE3;
+            line-height: 1.7;
+        }
+
+        .caresafe-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caresafe-footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .caresafe-footer a {
+            color: #DCEDE3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .caresafe-footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer-btn:hover {
+            background-color: #48966F;
+            text-decoration: none ;
+        }
+
+        .caresafe-footer hr {
+            border-color: #DCEDE3;
+            opacity: 0.4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="homepage01.html">
+                <img src="image/braincells.png" alt="">
+                Earthquake Safety
+            </a>
+            <button class="navbar-toggler"type="button"data-bs-toggle="collapse"data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage01.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="safety_tips.html">Safety Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false"> Earthquake Preparedness</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="elder.html">Elderly People</a></li>
+                            <li><a class="dropdown-item" href="children.html">Children</a></li>
+                            <li><a class="dropdown-item" href="staff.html">Care Assistants</a></li>
+                            <li><a class="dropdown-item" href="disabilities.html">People with Disabilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <h1>THE BRAIN CELLS</h1>
+        </div>
+
+    <div class="team">
+        <h2>Our Members</h2>
+
+        <div id="teamCarousel" class="carousel slide">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="image/tnp.png" alt="Thae Nadi Paing">
+                    <h3>Thae Nadi Paing</h3>
+                    <p class="member-role">Year 9 Taungoo Student</p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="image/mppk.png" alt="Myat Phoo Pwint Khaing">
+                    <h3>Myat Phoo Pwint Khaing</h3>
+                    <p class="member-role">Year 9 Taungoo Student</p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="image/ntms.png" alt="Nan Thain Mwae Shin">
+                    <h3>Nan Thain Mwae Shin</h3>
+                    <p class="member-role">Year 9 Taungoo Student</p>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+
+    
+<div class="container my-5">
+
+    <div class="text-center mb-4">
+        <h2>Our Purpose</h2>
+    </div>
+
+    <div class="accordion" id="purposeAccordion">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#goal">
+                    Our Main Goal
+                </button>
+            </h2>
+            <div id="goal" class="accordion-collapse collapse show" data-bs-parent="#purposeAccordion">
+                <div class="accordion-body">
+                    Our main goal is to improve earthquake preparedness in care centres by providing accessible and easy-to-understand safety information for staff, older adults, children and people with disabilities.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objectives">
+                    Our Objectives
+                </button>
+            </h2>
+            <div id="objectives" class="accordion-collapse collapse" data-bs-parent="#purposeAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Raise awareness about earthquake risks and safety.</li>
+                        <li>Share simple instructions for what to do before, during and after an earthquake.</li>
+                        <li>Encourage caregivers to prepare emergency supplies and safety plans.</li>
+                        <li>Promote accessible safety information for people with different needs.</li>
+                        <li>Encourage teamwork and cooperation during emergencies.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#target">
+                    Who We Aim to Support
+                </button>
+            </h2>
+            <div id="target" class="accordion-collapse collapse" data-bs-parent="#purposeAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Care Centre Staff: Helping caregivers understand emergency procedures and support residents.</li>
+                        <li>Older Adults: Providing clear guidance for residents who may need additional assistance.</li>
+                        <li>Children: Teaching basic earthquake safety through simple and visual resources.</li>
+                        <li>People with Disabilities: Promoting accessible instructions and individual emergency support.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#approach">
+                    What We Plan to Do
+                </button>
+            </h2>
+            <div id="approach" class="accordion-collapse collapse" data-bs-parent="#purposeAccordion">
+                <div class="accordion-body">
+                    We plan to learn about the needs and existing earthquake safety practices of care centres. We will then share useful information through presentations, demonstrations, illustrated guides, posters and educational videos.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#impact">
+                    Our Expected Impact
+                </button>
+            </h2>
+            <div id="impact" class="accordion-collapse collapse" data-bs-parent="#purposeAccordion">
+                <div class="accordion-body">
+                    We hope our project will help create a more prepared and informed care centre community, where residents and caregivers understand how to respond to earthquakes and look out for one another.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <footer class="caresafe-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h3></h3>
+                    <p>Helping vulerable communities stay safe through earthquake preparedness, awareness , and emergency support. </p>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="homepage01.html">Home</a></li>
+                        <li><a href="safety_tips.html">Safety Tips</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Prepared</h5>
+                    <p>Be informed. Be prepared. Stay safe.</p>
+                    <a href="homepage01.html" class="footer-btn">Explore</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 BrainCells | Earthquake Safety Awareness</p>
+                <p>Designed by Year 9 Students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

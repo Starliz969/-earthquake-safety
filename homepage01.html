@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Safety</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="image/braincells.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            background-color: #f4f8f5;
+            color: #183d30;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            background-color: #174c3c;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand:hover {
+            color: #dceee3;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #a9d7b9;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #174c3c;
+            border: 1px solid #527d68;
+            border-radius: 8px;
+        }
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #347b5c;
+            color: white;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            padding: 75px 0;
+            background-color: white;
+        }
+
+        .hero-title {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            color: #174c3c;
+        }
+
+        .prepared {
+            color: #347b5c;
+        }
+
+        .hero-text {
+            color: #68776e;
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 470px;
+            margin-top: 20px;
+        }
+
+        .main-btn {
+            display: inline-block;
+            background-color: #347b5c;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .main-btn:hover {
+            background-color: #174c3c;
+            color: white;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .hero-label {
+            color: #347b5c;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+
+        .section-padding {
+            padding: 75px 0;
+        }
+
+        .section-label {
+            color: #347b5c;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            color: #174c3c;
+            font-size: 35px;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 18px;
+        }
+
+        .section-text {
+            color: #68776e;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* INTRODUCTION */
+
+        .about-section {
+            background-color: #e5f0e8;
+        }
+
+        .about-box {
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(23, 76, 60, 0.08);
+            transition: 0.3s;
+        }
+
+        .about-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(23, 76, 60, 0.13);
+        }
+
+        .about-box h3 {
+            color: #174c3c;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .about-box p {
+            color: #68776e;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* THREE SAFETY STEPS */
+
+        .safety-section {
+            background-color: white;
+        }
+
+        .safety-card {
+            background-color: #f4f8f5;
+            padding: 30px;
+            border-radius: 12px;
+            height: 100%;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(23, 76, 60, 0.08);
+        }   
+
+        .safety-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(23, 76, 60, 0.13);
+        }
+
+        .card-number {
+            color: #347b5c;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .safety-card h3 {
+            color: #174c3c;
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .safety-card p {
+            color: #68776e;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .card-link {
+            color: #347b5c;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .card-link:hover {
+            color: #174c3c;
+        }
+
+        /* VULNERABLE GROUPS */
+
+        .groups-section {
+            background-color: #e5f0e8;
+        }
+
+        .group-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(23, 76, 60, 0.08);
+            transition: 0.3s;
+        }
+
+        .group-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(23, 76, 60, 0.13);
+        }
+
+        .group-card h3 {
+            color: #174c3c;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .group-card p {
+            color: #68776e;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .group-number {
+            background-color: #dceee3;
+            color: #174c3c;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+        
+        .view-more-btn {
+            display: inline-block;
+            background-color: #347b5c;
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s ease;
+        }
+
+        .view-more-btn:hover {
+            background-color: #174c3c;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .caresafe-footer {
+            background-color: #174C3C;
+            color: white;
+            padding: 45px 0 15px;
+            margin-top: 50px;
+        }
+
+        .caresafe-footer h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer p {
+            color: #DCEDE3;
+            line-height: 1.7;
+        }
+
+        .caresafe-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caresafe-footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .caresafe-footer a {
+            color: #DCEDE3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .caresafe-footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer-btn:hover {
+            background-color: #48966F;
+            text-decoration: none ;
+        }
+
+        .caresafe-footer hr {
+            border-color: #DCEDE3;
+            opacity: 0.4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="homepage01.html">
+                <img src="image/braincells.png" alt="">
+                Earthquake Safety
+            </a>
+            <button class="navbar-toggler"type="button"data-bs-toggle="collapse"data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage01.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="safety_tips.html">Safety Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false"> Earthquake Preparedness</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="elder.html">Elderly People</a></li>
+                            <li><a class="dropdown-item" href="children.html">Children</a></li>
+                            <li><a class="dropdown-item" href="staff.html">Care Assistants</a></li>
+                            <li><a class="dropdown-item" href="disabilities.html">People with Disabilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="hero-label">  EARTHQUAKE PREPAREDNESS GUIDE</div>
+                    <h1 class="hero-title">Stay Safe.<br>Be <span class="prepared">Prepared.</span><br>Protect Lives.</h1>
+                    <p class="hero-text"> Learn how to prepare for earthquakes and understand essential safety procedures designed for elderlypeople in care centers, children living in orphanages,and people with disabilities who may need additionalsupport during emergencies.</p>
+                    <a href="safety_tips.html" class="main-btn">
+                        Explore Safety Tips ↗
+                    </a>
+                </div>
+
+                <div class="col-lg-6">
+                    <img class="hero-image" src="image/caregiver.jpg" alt="Caregiver assisting an older adult">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: #e5f0e8;">
+        <div class="cotainer text-center">
+            <div class="section-label">MYANMAR EARTHQUAKE HISTORY</div>
+            <h2 class="section-title">
+                Myanmar's Earthquake History
+            </h2>
+
+            <div class="about-box mt-4">
+                <h2 style="font-size: 65px; color: #347b5c;">59+</h2>
+                <h3>Major Earthquake Since 1900</h3>
+                <p>Myanmar has experienced at least 59 recordedearthquakes of magnitude 6.0 or higher since 1900, highlighting the country's earthquake risk.</p>
+                <hr>
+                <h2 style="color: #347b5c;">7.7 Magnitude</h2>
+                <h3>28 March 2025</h3>
+                <p>A powerful earthquake struck central Myanmar,affecting Sagaing, Mandalay and surrounding areas.</p>
+                <a href="earthquake1.html" class="view-more-btn">
+                View More Information
+                </a>
+            </div>
+            <p class="">Source:Myanamr earthquake history.gov</p>
+        </div>
+    </section>
+
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-4">
+                    <div class="section-label">
+                        ABOUT EARTHQUAKE SAFETY
+                    </div>
+                    <h2 class="section-title"> Preparedness Can Save Lives.</h2>
+                </div>
+                <div class="col-lg-8">
+                    <p class="section-text">Earthquakes can happen suddenly and cause seriousdamage to buildings, communities and essential services. During these emergencies, vulnerableindividuals may face additional difficultiesunderstanding warnings, moving to safer areasand receiving assistance. </p>
+                    <p class="section-text">This website provides practical earthquake safety information to help individuals, caregivers and communities understand potential risks and prepare for emergencies. Our goal is to encourage better preparedness and promote the safety of everyone.</p>
+                </div>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="about-box">
+                        <h3>Why Preparation Matters</h3>
+                        <p>Preparing before an earthquake helps people understand what to do, where to go and howto respond during unexpected situations.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="about-box">
+                        <h3>Protecting Vulnerable People</h3>
+                        <p> Older adults, children and people with disabilities may need additional assistance during evacuation and emergency situations.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="about-box">
+                        <h3>Building Safer Communities</h3>
+                        <p>Sharing reliable information and encouraging emergency planning can improve community preparedness and cooperation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="safety-section section-padding" id="safety">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label">KNOW WHAT TO DO</div>
+
+                <h2 class="section-title">Three Important Stages of Earthquake Safety</h2>
+
+                <p class="section-text">Understanding what to do before, during and afteran earthquake can help reduce risks and improve safety.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <div class="card-number">01.</div>
+                        <h3>Before an Earthquake</h3>
+                        <p> Prepare emergency supplies, identify safeareas, secure heavy furniture and createan emergency communication plan.</p>
+                        <a href="before.html" class="card-link">Learn How to Prepare →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <div class="card-number">02.</div>
+                        <h3>During an Earthquake</h3>
+                        <p> Follow Drop, Cover and Hold On, stay awayfrom windows and protect yourself fromfalling objects.</p>
+
+                        <a href="during.html" class="card-link">Learn How to Stay Safe →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <div class="card-number">03.</div>
+                        <h3>After an Earthquake</h3>
+                        <p> Check for injuries, avoid damaged buildings,follow emergency instructions and preparefor possible aftershocks.</p>
+
+                        <a href="after.html" class="card-link">Learn What to Do →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="groups-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label">
+                    SPECIAL PREPAREDNESS
+                </div>
+                <h2 class="section-title">
+                    Safety Guidance for Everyone
+                </h2>
+                <p class="section-text">Different individuals may experience different challenges during earthquakes. Explore safety information designed for their specific needs.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="group-card">
+                        <div class="group-number">01</div>
+                        <h3>Elderly People</h3>
+                        <p>Learn about earthquake safety for older adults, including mobility assistance,emergency supplies and medical needs.</p>
+
+                        <a href="elder.html" class="card-link">Explore Guide →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="group-card">
+                        <div class="group-number">02</div>
+                        <h3>Children</h3>
+                        <p>Understand how to teach children simple earthquake safety procedures and help them respond calmly during emergencies.</p>
+
+                        <a href="#" class="card-link">Explore Guide →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="group-card">
+                        <div class="group-number">03</div>
+                        <h3>Care Assistants</h3>
+                        <p> Discover how caregivers can prepare emergency plans, support residentsand provide assistance during earthquakes.</p>
+
+                        <a href="staff.html" class="card-link">Explore Guide →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="group-card">
+                        <div class="group-number">04</div>
+                        <h3>People with Disabilities</h3>
+                        <p>Explore accessible safety proceduresfor individuals with mobility, hearing,vision and other support needs.</p>
+
+                        <a href="disabilities.html" class="card-link">Explore Guide →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>     
+    
+    <!-- SIGN IN / SIGN UP SECTION -->
+<div class="container text-center my-4">
+
+    <button class="btn btn-outline-success"
+        data-bs-toggle="modal" data-bs-target="#signInModal">
+        Sign In
+    </button>
+
+    <button class="btn btn-success"
+        data-bs-toggle="modal" data-bs-target="#signUpModal">
+        Sign Up
+    </button>
+
+</div>
+
+<!-- SIGN IN MODAL -->
+<div class="modal fade" id="signInModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header text-white" style="background:#174c3c;">
+                <h5 class="modal-title">Sign In</h5>
+                <button class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <form>
+                    <input type="email" class="form-control mb-3"
+                        placeholder="Email Address" required>
+
+                    <input type="password" class="form-control mb-3"
+                        placeholder="Password" required>
+
+                    <button type="submit" class="btn text-white w-100"
+                        style="background:#347b5c;">
+                        Sign In
+                    </button>
+                </form>
+
+                <p class="mt-3">
+                    Don't have an account?
+                    <a href="#" data-bs-toggle="modal"
+                        data-bs-target="#signUpModal"
+                        data-bs-dismiss="modal">Sign Up</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="signUpModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header text-white" style="background:#174c3c;">
+                <h5 class="modal-title">Create an Account</h5>
+                <button class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <form>
+                    <input type="text" class="form-control mb-3"
+                        placeholder="Full Name" required>
+
+                    <input type="email" class="form-control mb-3"
+                        placeholder="Email Address" required>
+
+                    <input type="password" class="form-control mb-3"
+                        placeholder="Password" required>
+
+                    <input type="password" class="form-control mb-3"
+                        placeholder="Confirm Password" required>
+
+                    <button type="submit" class="btn text-white w-100"
+                        style="background:#347b5c;">
+                        Sign Up
+                    </button>
+                </form>
+
+                <p class="mt-3">
+                    Already have an account?
+                    <a href="#" data-bs-toggle="modal"
+                        data-bs-target="#signInModal"
+                        data-bs-dismiss="modal">Sign In</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+        
+    <footer class="caresafe-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h3></h3>
+                    <p>Helping vulerable communities stay safe through earthquake preparedness, awareness , and emergency support. </p>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="homepage01.html">Home</a></li>
+                        <li><a href="safety_tips.html">Safety Tips</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Prepared</h5>
+                    <p>Be informed. Be prepared. Stay safe.</p>
+                    <a href="homepage01.html" class="footer-btn">Explore</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 BrainCells | Earthquake Safety Awareness</p>
+                <p>Designed by Year 9 Students</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    
+
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before an Earthquake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="image/braincells.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #DCEDE3;
+            color: #174C3C;
+        }
+
+        .navbar {
+            background-color: #174c3c;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand:hover {
+            color: #dceee3;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #a9d7b9;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #174c3c;
+            border: 1px solid #527d68;
+            border-radius: 8px;
+        }
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #347b5c;
+            color: white;
+        }
+
+        .page-header {
+            background-color: #347B5C;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .content-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        h2, h3 {
+            color: #347B5C;
+        }
+
+        .prepare-card {
+            background-color: #347B5C;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .prepare-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .prepare-card h4 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .prepare-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .prepare-number {
+            background-color: #DCEDE3;
+            color: #174C3C;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .kit-list li {
+            margin-bottom: 10px;
+        }
+
+        .accordion-button {
+            color: #174C3C;
+            font-weight: bold;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #DCEDE3;
+            color: #174C3C;
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: #347B5C;
+        }
+
+        .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+        .video-container video {
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .learn-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .learn-btn:hover {
+            background-color: #174C3C;
+            color: white;
+        }
+
+            .caresafe-footer {
+            background-color: #174C3C;
+            color: white;
+            padding: 45px 0 15px;
+            margin-top: 50px;
+        }
+
+        .caresafe-footer h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer p {
+            color: #DCEDE3;
+            line-height: 1.7;
+        }
+
+        .caresafe-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caresafe-footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .caresafe-footer a {
+            color: #DCEDE3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .caresafe-footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer-btn:hover {
+            background-color: #48966F;
+            text-decoration: none ;
+        }
+
+        .caresafe-footer hr {
+            border-color: #DCEDE3;
+            opacity: 0.4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="homepage01.html">
+                <img src="image/braincells.png" alt="">
+                Earthquake Safety
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage01.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="safety_tips.html">Safety Tips</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                            href="#" role="button"
+                            data-bs-toggle="dropdown">
+                            Earthquake Preparedness
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="elder.html">Elderly People</a></li>
+                            <li><a class="dropdown-item" href="children.html">Children</a></li>
+                            <li><a class="dropdown-item" href="staff.html">Care Assistants</a></li>
+                            <li><a class="dropdown-item" href="disabilities.html">People with Disabilities</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+    <div class="page-header">
+        <h1>Before an Earthquake</h1>
+        <p>Prepare Today to Stay Safer Tomorrow.</p>
+    </div>
+
+
+    <div class="container my-5">
+
+        <div class="content-card">
+            <h2>1. Why Should We Prepare?</h2>
+            <p> Earthquakes can happen without warning. Preparing in advance helps us respond more safely and reduces confusion during an emergency.</p>
+            <p>Everyone should know where to find emergency supplies, how to contact family members, and what to do when the ground starts shaking. </p>
+        </div>
+
+        <div class="content-card">
+            <h2>2. Important Preparation Steps</h2>
+            <p>Follow these important steps to prepare your home or care centre.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="prepare-card">
+                        <div class="prepare-number">01</div>
+                        <h4>Prepare an Emergency Kit</h4>
+                        <p> Prepare drinking water, food, a flashlight, a first-aid kit, batteries, and important personal supplies.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="prepare-card">
+                        <div class="prepare-number">02</div>
+                        <h4>Secure Heavy Furniture</h4>
+                        <p> Secure tall shelves, cabinets, and heavy furniture to help prevent them from falling during an earthquake.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="prepare-card">
+                        <div class="prepare-number">03</div>
+                        <h4>Identify Safe Places</h4>
+                        <p> Identify sturdy tables or desks where people can take cover. Stay away from windows and heavy objects.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="prepare-card">
+                        <div class="prepare-number">04</div>
+                        <h4>Make an Emergency Plan</h4>
+                        <p> Discuss what everyone should do, where to meet, and how to contact family members after an earthquake. </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="prepare-card">
+                        <div class="prepare-number">05</div>
+                        <h4>Keep Exits Clear</h4>
+                        <p> Keep corridors, doorways, and stairsfree from objects that could block people from moving safely.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="prepare-card">
+                        <div class="prepare-number">06</div>
+                        <h4>Practise Safety Drills</h4>
+                        <p> Practise Drop, Cover and Hold On so everyone understands what to do when an earthquake happens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- EMERGENCY KIT -->
+
+        <div class="content-card">
+            <h2>3. Prepare an Emergency Kit</h2>
+            <p> An emergency kit contains important supplies that people may need after an earthquake.</p>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="kit-list">
+                        <li>Drinking water</li>
+                        <li>Non-perishable food</li>
+                        <li>First-aid supplies</li>
+                        <li>Flashlight and extra batteries</li>
+                        <li>Whistle</li>
+                        <li>Important medicines</li>
+                        <li>Copies of important documents</li>
+                        <li>Mobile phone and power bank</li>
+                        <li>Extra clothes and hygiene supplies</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="image/First-Aid Kit for Cars and How to Use It.jpg" alt="Emergency supplies kit" class="img-fluid rounded" style="width:100%; max-height:300px; object-fit:cover;">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="content-card">
+            <h2>4. More Preparation Tips</h2>
+            <p>Open each section to learn more about earthquake preparation.</p>
+            <div class="accordion" id="prepareAccordion">
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tipOne">
+                            Preparing for Older Adults
+                        </button>
+                    </h2>
+
+                    <div id="tipOne" class="accordion-collapse collapse show" data-bs-parent="#prepareAccordion">
+
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Keep walking aids and wheelchairs accessible.</li>
+                                <li>Prepare extra medicines and medical supplies.</li>
+                                <li>Keep glasses and hearing aids in an easy-to-reach place.</li>
+                                <li>Make sure emergency instructions are easy to understand.</li>
+                                <li>Arrange helpers for people who need extra support.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipTwo">
+                            Preparing for Children
+                        </button>
+                    </h2>
+
+                    <div id="tipTwo" class="accordion-collapse collapse"data-bs-parent="#prepareAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Teach children basic earthquake safety rules.</li>
+                                <li>Explain where safe places are located.</li>
+                                <li>Practise earthquake drills together.</li>
+                                <li>Make sure children know who to contact in an emergency.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipThree">
+                            Preparing for People with Disabilities
+                        </button>
+                    </h2>
+
+                    <div id="tipThree" class="accordion-collapse collapse" data-bs-parent="#prepareAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Prepare an individual emergency support plan.</li>
+                                <li>Keep mobility and communication aids accessible.</li>
+                                <li>Use visual or written instructions when needed.</li>
+                                <li>Identify trusted people who can provide assistance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipFour">
+                            Preparing Your Home or Care Centre
+                        </button>
+                    </h2>
+
+                    <div id="tipFour" class="accordion-collapse collapse" data-bs-parent="#prepareAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Secure heavy furniture and equipment.</li>
+                                <li>Keep emergency exits clear.</li>
+                                <li>Identify safe areas in each room.</li>
+                                <li>Check emergency supplies regularly.</li>
+                                <li>Make sure everyone knows the emergency plan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-card video-container">
+            <h3>5. Watch the Safety Tutorials</h3>
+            <p>Watch these videos to learn how to prepare before an earthquake.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5>1. Emergency Kit Preparation</h5>
+                    <video controls class="w-100">
+                        <source src="image/roleplay2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h5>2. Earthquake Preparedness</h5>
+                    <video controls class="w-100">
+                        <source src="image/roleplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-card text-center">
+
+            <h3>Be Prepared, Stay Safe!</h3>
+
+            <p>
+                Preparing before an earthquake can help protect
+                you and the people around you.
+            </p>
+
+            <a href="safety_tips.html" class="learn-btn">
+                Back to Safety Tips
+            </a>
+    
+        </div>
+    </div>
+
+         <footer class="caresafe-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h3></h3>
+                    <p>Helping vulerable communities stay safe through earthquake preparedness, awareness , and emergency support. </p>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="homepage01.html">Home</a></li>
+                        <li><a href="safety_tips.html">Safety Tips</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Prepared</h5>
+                    <p>Be informed. Be prepared. Stay safe.</p>
+                    <a href="homepage01.html" class="footer-btn">Explore</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 BrainCells | Earthquake Safety Awareness</p>
+                <p>Designed by Year 9 Students</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

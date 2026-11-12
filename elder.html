@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Safety Tips for Elderly People</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="image/braincells.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6f0;
+            color: #263b2c;
+            padding: 0;
+            margin: 0;
+        }
+        
+         .navbar {
+            background-color: #174c3c;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand:hover {
+            color: #dceee3;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+
+        .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #a9d7b9;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #174c3c;
+            border: 1px solid #527d68;
+            border-radius: 8px;
+        }
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #347b5c;
+            color: white;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #416b4a;
+        }
+
+        .tips {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            display: flex;
+            overflow: hidden;
+        }
+
+         .tips {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .tip {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+        }
+
+        .tip {
+            background-color: white;
+            padding: 45px 70px;
+            text-align: center;
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .tip i {
+            font-size: 45px;
+            color: #416b4a;
+        }
+
+        .tip h3 {
+            color: #416b4a;
+        }
+
+        .tip p {
+            color: #526456;
+            line-height: 1.7;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            color: #416b4a;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        .left {
+            left: 20px;
+        }
+
+        .right {
+            right: 20px;
+        }
+
+        .guide {
+            max-width: 900px;
+            margin: 15px auto;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .guide summary {
+            padding: 20px;
+            cursor: pointer;
+            color: #416b4a;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .guide p, .guide ul {
+            padding: 0 25px;
+            color: #526456;
+            line-height: 1.7;
+        }
+
+        .guide h4 {
+            color: #416b4a;
+            padding: 0 25px;
+        }
+
+        .guide-content {
+            padding: 15px 25px;
+        }
+
+        .guide-content img {
+            width: 100%;
+            height: auto;
+        }
+
+           .caresafe-footer {
+            background-color: #174C3C;
+            color: white;
+            padding: 45px 0 15px;
+            margin-top: 50px;
+        }
+
+        .caresafe-footer h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer p {
+            color: #DCEDE3;
+            line-height: 1.7;
+        }
+
+        .caresafe-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caresafe-footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .caresafe-footer a {
+            color: #DCEDE3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .caresafe-footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer-btn:hover {
+            background-color: #48966F;
+            text-decoration: none ;
+        }
+
+        .caresafe-footer hr {
+            border-color: #DCEDE3;
+            opacity: 0.4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="image/braincells.png" alt="">
+                Earthquake Safety
+            </a>
+            <button class="navbar-toggler"type="button"data-bs-toggle="collapse"data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage01.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="safety_tips.html">Safety Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false"> Earthquake Preparedness</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="elder.html">Elderly People</a></li>
+                            <li><a class="dropdown-item" href="children.html">Children</a></li>
+                            <li><a class="dropdown-item" href="staff.html">Care Assistants</a></li>
+                            <li><a class="dropdown-item" href="disabilities.html">People with Disabilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Earthquake Safety Tips for Elderly People</h1>
+
+    <div class="tips">
+
+        <div class="tip" id="tip1">
+            <i class="bi bi-person-walking"></i>
+            <h3>1. Keep Walking Aids Within Reach</h3>
+            <p>
+                Keep walking sticks, walkers, wheelchairs, glasses and hearing aids close to the places where residents usually sit or sleep. Make sure these items are easy to reach and are not hidden under furniture. Caregivers should know where each person's essential equipment is kept.
+            </p>
+            <a href="#tip8" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip2" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="tip" id="tip2">
+            <i class="bi bi-clipboard2-check"></i>
+            <h3>2. Make a Personal Emergency Plan</h3>
+            <p>
+                Each older adult may have different needs. Prepare an individual plan that explains how the person moves, communicates and receives assistance. Include emergency contacts, medical needs, preferred ways of communicating and the support they may need during evacuation.
+            </p>
+            <a href="#tip1" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip3" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="tip" id="tip3">
+            <i class="bi bi-bell"></i>
+            <h3>3. Make Emergency Warnings Easy to Notice</h3>
+            <p>
+                Some older adults may have difficulty hearing alarms or noticing visual warnings. Use more than one warning method, such as loud alarms, flashing lights, vibrating alerts and direct verbal reminders. Caregivers should check that every resident has received and understood the warning.
+            </p>
+            <a href="#tip2" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip4" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="tip" id="tip4">
+            <i class="bi bi-signpost-split"></i>
+            <h3>4. Keep Walkways and Exits Clear</h3>
+            <p>
+                Remove loose rugs, boxes, cables and unnecessary furniture from hallways and doorways. Keep paths wide enough for walkers and wheelchairs. Mark exits clearly and make sure routes are familiar and accessible to residents before an earthquake occurs.
+            </p>
+            <a href="#tip3" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip5" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="tip" id="tip5">
+            <i class="bi bi-shield-check"></i>
+            <h3>5. Give Safe Support During Shaking</h3>
+            <p>
+                Help residents protect their head and neck and take cover under sturdy furniture when possible. If someone cannot move quickly, help them stay in a safer position away from windows and falling objects. Wheelchair users should lock their wheels and protect their head and neck if it is safe to do so. Avoid moving or lifting someone unnecessarily while the ground is shaking.
+            </p>
+            <a href="#tip4" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip6" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="tip" id="tip6">
+            <i class="bi bi-capsule"></i>
+            <h3>6. Prepare Medicines and Medical Supplies</h3>
+            <p>
+                Keep necessary medicines, medical documents, glasses, hearing-aid batteries, water and basic first-aid supplies in an easy-to-reach emergency kit. Check supplies regularly and make a plan for residents who depend on medical equipment or electricity.
+            </p>
+            <a href="#tip5" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip7" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="tip" id="tip7">
+            <i class="bi bi-chat-heart"></i>
+            <h3>7. Communicate Calmly and Clearly</h3>
+            <p>
+                Older adults may feel confused, frightened or overwhelmed during an emergency. Speak slowly, use short and clear instructions, and give residents enough time to respond. Explain what is happening and avoid shouting or giving several instructions at once.
+            </p>
+            <a href="#tip6" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip8" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="tip" id="tip8">
+            <i class="bi bi-people"></i>
+            <h3>8. Check on Residents After the Earthquake</h3>
+            <p>
+                Once the shaking stops, check every resident for injuries, distress or urgent medical needs. Be prepared for aftershocks and keep everyone away from damaged buildings, broken glass and unstable objects. Follow official instructions and do not return to unsafe areas until authorities say it is safe.
+            </p>
+            <a href="#tip7" class="arrow left"><i class="bi bi-chevron-left"></i></a>
+            <a href="#tip1" class="arrow right"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+    </div>
+
+    <h2>Safety Guide for Elderly People</h2>
+
+    <p style="text-align: center;">
+        Older adults may face different challenges during an earthquake. Click each category to learn how caregivers can provide suitable support.
+    </p>
+
+    <details class="guide">
+        <summary><i class="bi bi-person-wheelchair"></i> Mobility and Physical Difficulties</summary>
+
+        <div class="guide-content">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h4>Possible Challenges</h4>
+                    <ul>
+                        <li>Difficulty standing, walking or moving quickly.</li>
+                        <li>Difficulty using stairs or reaching emergency exits.</li>
+                        <li>Risk of losing balance because of shaking or fallen objects.</li>
+                    </ul>
+
+                    <h4>How Caregivers Can Help</h4>
+                    <ul>
+                        <li>Keep walking sticks, walkers and wheelchairs within reach.</li>
+                        <li>Keep hallways and evacuation routes clear and wide.</li>
+                        <li>Prepare an individual evacuation plan with suitable assistance.</li>
+                        <li>Ask how the resident prefers to be helped before moving them, whenever possible.</li>
+                        <li>Practise the evacuation plan so caregivers understand their roles.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="image/prepare-with-disabilities_final.png" alt="Caregiver assisting an older adult with mobility during earthquake preparation">
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <details class="guide">
+        <summary><i class="bi bi-eye"></i> Vision Difficulties</summary>
+
+        <div class="guide-content">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h4>Possible Challenges</h4>
+                    <ul>
+                        <li>Difficulty seeing fallen objects, broken glass and other hazards.</li>
+                        <li>Difficulty finding exits or following unfamiliar routes.</li>
+                        <li>Difficulty reading small signs and written instructions.</li>
+                    </ul>
+
+                    <h4>How Caregivers Can Help</h4>
+                    <ul>
+                        <li>Give clear verbal directions and describe nearby obstacles.</li>
+                        <li>Keep glasses, walking sticks and other aids within reach.</li>
+                        <li>Ask before offering assistance and allow the person to hold your arm if they prefer.</li>
+                        <li>Use large, high-contrast signs and keep pathways uncluttered.</li>
+                        <li>Guide residents along familiar routes when it is safe.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="image/green blind.png" alt="">
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <details class="guide">
+        <summary><i class="bi bi-ear"></i> Hearing Difficulties</summary>
+
+        <div class="guide-content">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h4>Possible Challenges</h4>
+                    <ul>
+                        <li>Not hearing alarms, announcements or verbal warnings.</li>
+                        <li>Difficulty understanding instructions spoken from a distance.</li>
+                        <li>Missing important safety updates after the earthquake.</li>
+                    </ul>
+
+                    <h4>How Caregivers Can Help</h4>
+                    <ul>
+                        <li>Use flashing lights, visual alarms or vibrating alerts.</li>
+                        <li>Get the resident's attention before giving instructions.</li>
+                        <li>Face the person while speaking and use short, clear sentences.</li>
+                        <li>Write down important instructions or use familiar signs.</li>
+                        <li>Keep hearing aids and spare batteries accessible when possible.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="image/deafelder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <details class="guide">
+        <summary><i class="bi bi-brain"></i> Memory and Cognitive Difficulties</summary>
+
+        <div class="guide-content">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h4>Possible Challenges</h4>
+                    <ul>
+                        <li>Difficulty remembering emergency procedures or evacuation routes.</li>
+                        <li>Difficulty understanding complicated or unfamiliar instructions.</li>
+                        <li>Feeling confused or overwhelmed by sudden changes and loud noises.</li>
+                    </ul>
+
+                    <h4>How Caregivers Can Help</h4>
+                    <ul>
+                        <li>Use short, simple instructions and explain one step at a time.</li>
+                        <li>Use familiar pictures, symbols and signs to communicate.</li>
+                        <li>Stay with the resident and calmly repeat instructions when needed.</li>
+                        <li>Give the person enough time to understand and respond.</li>
+                        <li>Practise simple emergency routines regularly so they become familiar.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="https://emedspecialist.com.au/wp-content/uploads/2024/10/Group-257.png" alt="">
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <details class="guide">
+        <summary><i class="bi bi-heart-pulse"></i> Medical and Health Needs</summary>
+
+        <div class="guide-content">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h4>Possible Challenges</h4>
+                    <ul>
+                        <li>Needing regular medicines or medical treatment.</li>
+                        <li>Depending on medical equipment that requires electricity.</li>
+                        <li>Having difficulty explaining medical needs during a stressful emergency.</li>
+                    </ul>
+
+                    <h4>How Caregivers Can Help</h4>
+                    <ul>
+                        <li>Keep an updated list of medicines, allergies and emergency contacts.</li>
+                        <li>Prepare an accessible supply of essential medicines and medical documents.</li>
+                        <li>Identify backup power options for essential medical equipment with appropriate professional guidance.</li>
+                        <li>Make sure caregivers know which residents need urgent medical support.</li>
+                        <li>Arrange medical assistance as soon as it is safe after the earthquake.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="https://resourcehealthcare.org/wp-content/uploads/2023/06/20945398-Converted.png" alt="">
+                </div>
+            </div>
+        </div>
+    </details>
+
+     <footer class="caresafe-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h3></h3>
+                    <p>Helping vulerable communities stay safe through earthquake preparedness, awareness , and emergency support. </p>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="homepage01.html">Home</a></li>
+                        <li><a href="safety_tips.html">Safety Tips</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Prepared</h5>
+                    <p>Be informed. Be prepared. Stay safe.</p>
+                    <a href="homepage01.html" class="footer-btn">Explore</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 BrainCells | Earthquake Safety Awareness</p>
+                <p>Designed by Year 9 Students</p>
+            </div>
+        </div>
+
+    </footer>
+
+            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

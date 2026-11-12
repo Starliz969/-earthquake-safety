@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Research</title>
+    <link rel="shortcut icon" href="image/braincells.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f8f5;
+            color: #183d30;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #174c3c;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand:hover {
+            color: #dceee3;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+
+        .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #a9d7b9;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #174c3c;
+            border: 1px solid #527d68;
+            border-radius: 8px;
+        }
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #347b5c;
+            color: white;
+        }
+
+        .hero {
+            background-color: #e5f0e8;
+            padding: 75px 20px;
+            text-align: center;
+        }
+        
+        .hero {
+            background-color: #e5f0e8;
+            padding: 75px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: #174c3c;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: #174c3c;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+
+        .stat-number {
+            color: #347b5c;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .accordion-button {
+            background-color: white;
+            color: #174c3c;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        .accordion-body {
+            background-color: white;
+            line-height: 1.8;
+            padding: 25px;
+        }
+
+        .info-box {
+            background-color: #e5f0e8;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .footer {
+            background-color: #174c3c;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .back-btn {
+            background-color: #347b5c;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 25px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: #174c3c;
+            color: white;
+        }
+
+        .source-link {
+            color: #347b5c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .source-link:hover {
+            text-decoration: underline;
+        }
+
+         .caresafe-footer {
+            background-color: #174C3C;
+            color: white;
+            padding: 45px 0 15px;
+            margin-top: 50px;
+        }
+
+        .caresafe-footer h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer p {
+            color: #DCEDE3;
+            line-height: 1.7;
+        }
+
+        .caresafe-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caresafe-footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .caresafe-footer a {
+            color: #DCEDE3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .caresafe-footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer-btn:hover {
+            background-color: #48966F;
+            text-decoration: none ;
+        }
+
+        .caresafe-footer hr {
+            border-color: #DCEDE3;
+            opacity: 0.4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="homepage01.html">
+                <img src="image/braincells.png" alt="">
+                Earthquake Safety
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage01.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="safety_tips.html">Safety Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false"> Earthquake Preparedness</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="elder.html">Elderly People</a></li>
+                            <li><a class="dropdown-item" href="children.html">Children</a></li>
+                            <li><a class="dropdown-item" href="staff.html">Care Assistants</a></li>
+                            <li><a class="dropdown-item" href="disabilities.html">People with Disabilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <span class="text-bg-success mb-3">DISASTER RESEARCH</span>
+            <h1>Myanmar's Earthquake History</h1>
+            <p class="mt-3">Understanding past earthquakes, their impacts,and how communities work together during disasters.</p>
+            <a href="#research" class="btn btn-success mt-3">Explore the Research</a>
+        </div>
+    </div>
+
+    <section class="container py-5">
+        <h2 class="section-title text-center">Important Statistics</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="stat-card text-center">
+                    <div class="stat-number">12</div>
+                    <h5>Major Earthquakes</h5>
+                    <p class="mb-0"> Magnitude 6 or higher earthquakes impacting Myanmar during the 21st century.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="stat-card text-center">
+                    <div class="stat-number">7.7</div>
+                    <h5>Magnitude</h5>
+                    <p class="mb-0">The powerful earthquake that struck central Myanmar on 28 March 2025.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-card text-center">
+                    <div class="stat-number">3,818</div>
+                    <h5>Reported Deaths</h5>
+                    <p class="mb-0">Officially reported deaths from the 2025 earthquake as of its first anniversary.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5" id="research">
+        <h2 class="section-title text-center">
+            Explore the Earthquake Research
+        </h2>
+        <p class="text-center mb-4">Click each question to discover more information</p>
+        <div class="accordion" id="earthquakeAccordion">
+            <!-- q1 -->
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#questionOne">
+                        1. How many times have earthquakes hit Myanmar?
+                    </button>
+                </h2>
+
+                <div id="questionOne" class="accordion-collapse collapse show" data-bs-parent="#earthquakeAccordion">
+                    <div class="accordion-body">
+                        <h5>Myanmar's Earthquake History</h5>
+                        <p>Myanmar is located in a seismically active region, meaning earthquakes can occur because of movements along active faults.</p>
+                        <p>According to the World Bank, 12 earthquakes of magnitude 6.0 or higher impacted Myanmar during the 21st century.</p>
+
+                        <div class="info-box">
+                            <strong>Did You Know?</strong>
+                            <p class="mb-0">Myanmar has experienced several destructive earthquakes throughout its history. The 2025 earthquake was one of the strongest recorded events to affect the country.</p>
+                        </div>
+
+                        <p class="mt-3"><Strong>The figure of 12 counts earthquakes of magnitude 6 or higher during the 21st century. It does not represent every small earthquake in Myanmar.</Strong></p>
+                    </div>
+                </div>
+             </div>
+
+             <!-- q2 -->
+         <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionTwo"> 2. Where Did The Earthquake Happen?</button>
+            </h2>
+
+            <div id="questionTwo" class="accordion-collapse collapse" data-bs-parent="#earthquakeAccordion">
+                <div class="accordion-body">
+                    <h5>Areas Affected by the 2025 Earthquake</h5>
+                    <p>On 28 March 2025, a magnitude 7.7 earthquake struck central Myanmar. Its epicentre was located near Sagaing and Mandalay.</p>
+                    <p>The earthquake also affected several other areas across the country.</p>
+
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <strong>Sagaing Region</strong>
+                                <p class="mb-0"> Near the earthquake's epicentre and among the hardest-hit areas.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <strong>Mandalay Region</strong>
+                                <p class="mb-0">Experienced severe building damage and casualties</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <strong>Nay Pyi Taw</strong>
+                                <p class="mb-0">Buildings and important facilities were damaged</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <strong>Southern Shan State</strong>
+                                <p class="mb-0">
+                                    Towns including Kalaw and
+                                    Nyaungshwe were affected.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <strong>Bago Region</strong>
+                                <p class="mb-0">
+                                    Also experienced earthquake
+                                    impacts and infrastructure damage.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <strong>Magway Region</strong>
+                                <p class="mb-0">
+                                    Included among the affected
+                                    regions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box mt-4">
+                        <strong>Why Were These Places Affected?</strong>
+                        <p class="mb-0">The earthquake produced strong shaking across central Myanmar, damaging buildings, roads, bridges and other structures.</p>
+                    </div>
+
+                </div>
+            </div>
+         </div>
+
+         <!-- q3 -->
+         <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionThree"> 3. How many people died or were injured?</button>
+            </h2>
+
+            <div id="questionThree" class="accordion-collapse collapse" data-bs-parent="#earthquakeAccordion">
+                <div class="accordion-body">
+                    <h5>Human Impact</h5>
+                    <p>The 2025 earthquake caused a major humanitariancrisis. Many people lost family members, homes and access to essential services.</p>
+
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="stat-card text-center">
+                                <div class="stat-number">3,818</div>
+                                <h6>Deaths</h6>
+                                <span class="badge text-bg-danger">
+                                    Fatalities
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="stat-card text-center">
+                                <div class="stat-number">5,104</div>
+                                <h6>Injured People</h6>
+                                <span class="badge text-bg-warning">
+                                    Injuries
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="stat-card text-center">
+                                <div class="stat-number">279,111</div>
+                                <h6>Temporarily Displaced</h6>
+                                <span class="badge text-bg-success">
+                                    People
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-3">These figures were reported at the first anniversary of the earthquake in March 2026.</p>
+
+                    <div class="info-box">
+                        <strong>Other challenges faced by survivors:</strong>
+                        <ul class="mb-0 mt-2">
+                            <li>Lack of safe shelter and clean water.</li>
+                            <li>Limited access to hospitals and medicine.</li>
+                            <li>Loss of family members and loved ones.</li>
+                            <li>Stress and emotional difficulties.</li>
+                            <li>Disruption to education and daily life.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- q4 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionFive">5. How did people help each other?</button>
+            </h2>
+
+            <div id="questionFive" class="accordion-collapse collapse" data-bs-parent="#earthquakeAccordion">
+                <div class="accordion-body">
+                    <h5>Community Support and Solidarity</h5>
+                    <p> During the earthquake response, peoplesupported one another through rescue work, donations and emergency assistance.</p>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6 class="fw-bold">Search and Rescue</h6>
+                                <p class="mb-0">Local volunteers and rescue teams helped search for people trapped in damaged buildings.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6 class="fw-bold">Food and Water</h6>
+                                <p class="mb-0">Communities and aid groups distributed food, drinking water and essential supplies.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6 class="fw-bold">Medical Assistance</h6>
+                                <p class="mb-0">Medical teams and volunteers supported injured people and helped them receive treatment.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6 class="fw-bold">Temporary Shelter</h6>
+                                <p class="mb-0">People helped affected families find temporary places to stay and provided shelter materials.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6 class="fw-bold">Donations</h6>
+                                <p class="mb-0">People contributed money, clothes, food and other essential items.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6 class="fw-bold">Supporting Vulnerable People</h6>
+                                <p class="mb-0">Families and volunteers helped older adults, children and people with disabilities access support.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="info-box mt-4">
+                        <strong>Community impact</strong>
+                        <p class="mb-0"> Cooperation between local communities, volunteers and rescue organizations helped provide important support during the emergency. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="text-center">
+            <h2 class="section-title">Research Sources</h2>
+            <p>Explore the reports used to support this research.</p>
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#sourceList">View Research Sources</button>
+        </div>
+
+        <div class="collapse mt-4" id="sourceList">
+            <div class="card card-body">
+                <ul class="mb-2">
+                    <li class="mb-2"><a class="source-link" href="https://www.worldbank.org/ext/en/country/myanmar" target="_blank">World Bank - Myanmar</a></li>
+                    <li class="mb-2"><a class="source-link" href="https://myanmar.un.org/en/291866-initial-situation-report-earthquake-central-myanmar-28-march-2025" target="_blank">United Nations – Initial Earthquake Situation Report</a></li>
+                    <li class="mb-2"><a class="source-link" href="https://www.who.int/southeastasia/news/detail/01-04-2025-who-response-mmr-eq25" target="_blank">WHO – Response to Myanmar Earthquake 2025</a></li>
+                    <li class="mb-2"><a class="source-link" href="https://www.icrc.org/sites/default/files/2025-09/Myanmar_Earthquake_response-6-months_update-ENG_Final.pdf" target="_blank"> ICRC – Myanmar Earthquake Response</a></li>
+                    <li class="mb-2"><a class="source-link" href="https://www.moi.gov.mm/" target="_blank">Myanmar Ministry of Information</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="caresafe-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h3></h3>
+                    <p>Helping vulerable communities stay safe through earthquake preparedness, awareness , and emergency support. </p>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="homepage01.html">Home</a></li>
+                        <li><a href="safety_tips.html">Safety Tips</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Prepared</h5>
+                    <p>Be informed. Be prepared. Stay safe.</p>
+                    <a href="homepage01.html" class="footer-btn">Explore</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 BrainCells | Earthquake Safety Awareness</p>
+                <p>Designed by Year 9 Students</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>   
+</body>
+</html>

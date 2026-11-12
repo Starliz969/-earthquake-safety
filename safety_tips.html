@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Safety Tips</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="image/braincells.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            background-color: #DCEDE3;
+            color: #174C3C;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #174c3c;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand:hover {
+            color: #dceee3;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #a9d7b9;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #174c3c;
+            border: 1px solid #527d68;
+            border-radius: 8px;
+        }
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #347b5c;
+            color: white;
+        }
+
+
+        .page-header {
+            background-color:#347B5C;
+            color: #FFFFFF;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-weight: 700;
+            font-size: 38px;
+        }
+
+        .page-header p {
+            color: #DCEDE3;
+            font-size: 16px;
+        }
+
+
+        .section-title {
+            color: #174C3C;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+
+        .safety-card {
+            background-color: #FFFFFF;
+            padding: 25px;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(23, 76, 60, 0.10);
+            transition: 0.3s;
+        }
+
+        .safety-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(23, 76, 60, 0.18);
+        }
+
+        .safety-card h4 {
+            color: #347B5C;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .safety-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .safety-card li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            color: #174C3C;
+        }
+
+        /* SECTION SPACING */
+
+        .section-area {
+            margin-bottom: 65px;
+            scroll-margin-top: 30px;
+        }
+
+        .section-description {
+            color: #347B5C;
+            margin-bottom: 25px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+         .caresafe-footer {
+            background-color: #174C3C;
+            color: white;
+            padding: 45px 0 15px;
+            margin-top: 50px;
+        }
+
+        .caresafe-footer h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer p {
+            color: #DCEDE3;
+            line-height: 1.7;
+        }
+
+        .caresafe-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caresafe-footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .caresafe-footer a {
+            color: #DCEDE3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .caresafe-footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer-btn:hover {
+            background-color: #48966F;
+            text-decoration: none ;
+        }
+
+        .caresafe-footer hr {
+            border-color: #DCEDE3;
+            opacity: 0.4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .learn-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .learn-btn:hover {
+            background-color: #174C3C;
+            color: #FFFFFF;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="homepage01.html">
+                <img src="image/braincells.png" alt="">
+                Earthquake Safety
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage01.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="safety_tips.html">Safety Tips</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"role="button" data-bs-toggle="dropdown"aria-expanded="false">
+                            Earthquake Preparedness
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="elder.html">Elderly People</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="children.html">Children</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="staff.html">Care Assistants</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="disabilities.html">People with Disabilities</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Earthquake Safety Tips</h1>
+            <p class="mt-3 mb-0">
+                Learn how to stay safe and protect others before,
+                during and after an earthquake!
+            </p>
+        </div>
+    </header>
+
+
+    <main class="container py-5">
+
+        <!-- SECTION 1: GENERAL SAFETY -->
+
+        <section class="section-area" id="safety">
+
+            <h2 class="section-title">01. General Earthquake Safety</h2>
+
+            <p class="section-description">
+                Essential safety guidelines for everyone!
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <h4>Before an Earthquake</h4>
+                        <ul>
+                            <li>Prepare an emergency kit with essential supplies!</li>
+                            <li>Identify safe places inside your building!</li>
+                            <li>Secure heavy furniture and objects!</li>
+                            <li>Keep emergency contact numbers nearby!</li>
+                            <li>Learn evacuation routes and safety procedures!</li>
+                        </ul> 
+
+                        <a href="before.html" class="learn-btn">
+                         Learn More →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <h4>During an Earthquake</h4>
+                        <ul>
+                            <li>Drop, Cover and Hold On!</li>
+                            <li>Stay away from windows and glass!</li>
+                            <li>Protect your head and neck!</li>
+                            <li>Do not use elevators!</li>
+                            <li>Stay indoors until shaking stops!</li>
+                        </ul>
+
+                        <a href="during.html" class="learn-btn">
+                         Learn More →
+                        </a>
+                     </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <h4>After an Earthquake</h4>
+                        <ul>
+                            <li>Check yourself and others for injuries!</li>
+                            <li>Be prepared for aftershocks!</li>
+                            <li>Leave damaged buildings when it is safe!</li>
+                            <li>Listen to official emergency announcements!</li>
+                            <li>Avoid damaged buildings and structures!</li>
+                        </ul>
+
+                        <a href="after.html" class="learn-btn">
+                         Learn More →
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-area">
+
+            <h2 class="section-title">02. Special Safety Guidance</h2>
+
+            <p class="section-description">
+                Additional safety measures for people who may need extra support!
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="safety-card" id="elderly">
+                        <h4>Older Adults</h4>
+                        <ul>
+                            <li>Keep walking aids, glasses and hearing aids accessible!</li>
+                            <li>Prepare essential medications and medical information!</li>
+                            <li>Identify safe places that are easy to reach!</li>
+                            <li>Ask a trusted person for assistance if needed!</li>
+                            <li>Keep emergency supplies within easy reach!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="safety-card" id="disabilities">
+                        <h4>People with Disabilities</h4>
+                        <ul>
+                            <li>Prepare an emergency plan based on individual needs!</li>
+                            <li>Keep mobility and communication devices nearby!</li>
+                            <li>Identify accessible safe areas!</li>
+                            <li>Inform trusted people about the assistance you may need!</li>
+                            <li>Keep backup batteries for essential devices!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="safety-card" id="children">
+                        <h4>Children</h4>
+                        <ul>
+                            <li>Learn how to Drop, Cover and Hold On!</li>
+                            <li>Understand emergency procedures!</li>
+                            <li>Keep important contact information available!</li>
+                            <li>Stay with trusted adults during emergencies!</li>
+                            <li>Know where to meet family members after an earthquake!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="safety-card">
+                        <h4>People with Limited Mobility</h4>
+                        <ul>
+                            <li>Identify safe places that can be reached easily!</li>
+                            <li>Keep mobility aids within reach!</li>
+                            <li>Prepare an assistance plan with trusted people!</li>
+                            <li>Keep emergency supplies nearby!</li>
+                            <li>Practise an accessible emergency plan!</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="section-area">
+
+            <h2 class="section-title">03. Caregiver Guidelines</h2>
+
+            <p class="section-description">
+                Learn how caregivers can protect and support vulnerable people!
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="safety-card" id="care-assistants">
+                        <h4>Before an Earthquake</h4>
+                        <ul>
+                            <li>Understand each person's medical and mobility needs!</li>
+                            <li>Prepare emergency supplies and medications!</li>
+                            <li>Identify accessible safe areas!</li>
+                            <li>Make an emergency communication plan!</li>
+                            <li>Practise safety procedures together!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <h4>During an Earthquake</h4>
+                        <ul>
+                            <li>Give calm and clear instructions!</li>
+                            <li>Help people reach a safe position if possible!</li>
+                            <li>Protect those who need physical assistance!</li>
+                            <li>Keep mobility aids nearby!</li>
+                            <li>Follow Drop, Cover and Hold On procedures!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="safety-card">
+                        <h4>After an Earthquake</h4>
+                        <ul>
+                            <li>Check everyone's condition and safety!</li>
+                            <li>Provide necessary assistance!</li>
+                            <li>Help people move away from damaged areas!</li>
+                            <li>Check essential medications and supplies!</li>
+                            <li>Provide emotional support and reassurance!</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="caresafe-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h3></h3>
+                    <p>Helping vulerable communities stay safe through earthquake preparedness, awareness , and emergency support. </p>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="homepage01.html">Home</a></li>
+                        <li><a href="safety_tips.html">Safety Tips</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Prepared</h5>
+                    <p>Be informed. Be prepared. Stay safe.</p>
+                    <a href="homepage01.html" class="footer-btn">Explore</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 BrainCells | Earthquake Safety Awareness</p>
+                <p>Designed by Year 9 Students</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

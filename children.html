@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Earthquake Safety for Children</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="image/braincells.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6f0;
+            color: #263b2c;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAVBAR */
+
+         .navbar {
+            background-color: #174c3c;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand:hover {
+            color: #dceee3;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #a9d7b9;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .dropdown-menu {
+            background-color: #174c3c;
+            border: 1px solid #527d68;
+            border-radius: 8px;
+        }
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #347b5c;
+            color: white;
+        }
+
+      
+
+        /* HEADINGS */
+
+        h1, h2 {
+            text-align: center;
+            color: #416b4a;
+        }
+
+        .page-title {
+            margin: 35px 15px 15px;
+        }
+
+        .description {
+            text-align: center;
+            max-width: 750px;
+            margin: 15px auto;
+            line-height: 1.7;
+            color: #526456;
+        }
+
+        /* INTRODUCTION */
+
+        .intro {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #dceee3;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .intro img {
+            width: 100%;
+            max-width: 400px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        /* SLIDING TIPS */
+
+        .tips {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+        }
+
+        .tip {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            background-color: white;
+            padding: 45px 70px;
+            text-align: center;
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .tip i {
+            font-size: 45px;
+            color: #416b4a;
+        }
+
+        .tip h3 {
+            color: #416b4a;
+            margin-top: 15px;
+        }
+
+        .tip p {
+            color: #526456;
+            line-height: 1.7;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            color: #416b4a;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        .left {
+            left: 20px;
+        }
+
+        .right {
+            right: 20px;
+        }
+
+        /* GUIDE SECTIONS */
+
+        .guide {
+            max-width: 900px;
+            margin: 15px auto;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .guide summary {
+            padding: 20px;
+            cursor: pointer;
+            color: #416b4a;
+            font-size: 18px;
+            font-weight: bold;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .guide p, .guide ul {
+            padding: 0 25px;
+            color: #526456;
+            line-height: 1.7;
+        }
+
+        .guide h4 {
+            color: #416b4a;
+            padding: 0 25px;
+        }
+
+        .guide-content {
+            padding: 15px 25px;
+        }
+
+        .guide-content img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* FOOTER */
+
+         .caresafe-footer {
+            background-color: #174C3C;
+            color: white;
+            padding: 45px 0 15px;
+            margin-top: 50px;
+        }
+
+        .caresafe-footer h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .caresafe-footer p {
+            color: #DCEDE3;
+            line-height: 1.7;
+        }
+
+        .caresafe-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caresafe-footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .caresafe-footer a {
+            color: #DCEDE3;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .caresafe-footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #347B5C;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer-btn:hover {
+            background-color: #48966F;
+            text-decoration: none ;
+        }
+
+        .caresafe-footer hr {
+            border-color: #DCEDE3;
+            opacity: 0.4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="homepage01.html">
+                <img src="image/braincells.png" alt="">
+                Earthquake Safety
+            </a>
+            <button class="navbar-toggler"type="button"data-bs-toggle="collapse"data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage01.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="safety_tips.html">Safety Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false"> Earthquake Preparedness</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="elder.html">Elderly People</a></li>
+                            <li><a class="dropdown-item" href="children.html">Children</a></li>
+                            <li><a class="dropdown-item" href="staff.html">Care Assistants</a></li>
+                            <li><a class="dropdown-item" href="disabilities.html">People with Disabilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  
+
+
+    <!-- PAGE TITLE -->
+
+    <h1 class="page-title">Earthquake Safety for Children</h1>
+
+    <p class="description">
+        Learn simple and important ways to stay safe before,
+        during and after an earthquake. Being prepared can
+        help children protect themselves and others.
+    </p>
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>Welcome, Young Learners!</h2>
+
+        <p>
+            Earthquakes can happen suddenly and make the ground shake.
+            Knowing what to do can help us stay calm and safe.
+            Let's learn some important earthquake safety rules!
+        </p>
+
+        <img
+        src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800"
+        alt="Children learning together in a classroom">
+
+    </div>
+
+
+    <!-- SLIDING SAFETY TIPS -->
+
+    <h2>Important Earthquake Safety Tips</h2>
+
+    <p class="description">
+        Use the arrows to explore these important safety tips.
+    </p>
+
+    <div class="tips">
+
+        <!-- TIP 1 -->
+
+        <div class="tip" id="tip1">
+
+            <i class="bi bi-bag-heart"></i>
+
+            <h3>1. Prepare an Emergency Kit</h3>
+
+            <p>
+                Keep an emergency bag ready with drinking water,
+                snacks, a flashlight, a first-aid kit and other
+                important supplies. Make sure you know where it is.
+            </p>
+
+            <a href="#tip8" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip2" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TIP 2 -->
+
+        <div class="tip" id="tip2">
+
+            <i class="bi bi-house-check"></i>
+
+            <h3>2. Learn Safe Places</h3>
+
+            <p>
+                Find safe places at home and school.
+                Choose a sturdy table or desk where you can
+                take cover and stay away from windows.
+            </p>
+
+            <a href="#tip1" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip3" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TIP 3 -->
+
+        <div class="tip" id="tip3">
+
+            <i class="bi bi-person-check"></i>
+
+            <h3>3. Listen to Adults</h3>
+
+            <p>
+                Pay attention to teachers, parents and caregivers.
+                They can help you understand safety instructions
+                and know what to do during an emergency.
+            </p>
+
+            <a href="#tip2" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip4" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TIP 4 -->
+
+        <div class="tip" id="tip4">
+
+            <i class="bi bi-shield-check"></i>
+
+            <h3>4. Drop, Cover and Hold On</h3>
+
+            <p>
+                When shaking begins, drop to your hands and knees,
+                cover your head and neck under sturdy furniture
+                if available, and hold on until the shaking stops.
+            </p>
+
+            <a href="#tip3" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip5" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TIP 5 -->
+
+        <div class="tip" id="tip5">
+
+            <i class="bi bi-window"></i>
+
+            <h3>5. Stay Away from Windows</h3>
+
+            <p>
+                Stay away from windows, glass, mirrors and
+                heavy objects that could fall. These objects
+                may become dangerous during an earthquake.
+            </p>
+
+            <a href="#tip4" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip6" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TIP 6 -->
+
+        <div class="tip" id="tip6">
+
+            <i class="bi bi-person-walking"></i>
+
+            <h3>6. Stay Calm and Move Carefully</h3>
+
+            <p>
+                Do not run or rush while the ground is shaking.
+                Protect yourself first and wait until the shaking
+                stops before moving to a safer place.
+            </p>
+
+            <a href="#tip5" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip7" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TIP 7 -->
+
+        <div class="tip" id="tip7">
+
+            <i class="bi bi-people"></i>
+
+            <h3>7. Stay with a Trusted Adult</h3>
+
+            <p>
+                After the shaking stops, stay with your teacher,
+                parent or caregiver. Do not wander away or
+                enter damaged buildings.
+            </p>
+
+            <a href="#tip6" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip8" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TIP 8 -->
+
+        <div class="tip" id="tip8">
+
+            <i class="bi bi-exclamation-triangle"></i>
+
+            <h3>8. Be Ready for Aftershocks</h3>
+
+            <p>
+                Smaller earthquakes called aftershocks may happen
+                after the main earthquake. Follow adult instructions
+                and be ready to protect yourself again.
+            </p>
+
+            <a href="#tip7" class="arrow left">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+
+            <a href="#tip1" class="arrow right">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- EARTHQUAKE SAFETY GUIDE -->
+
+    <h2>Earthquake Safety Guide</h2>
+
+    <p class="description">
+        Learn what to do at each stage of an earthquake.
+        Click on each category to discover more.
+    </p>
+
+
+    <!-- BEFORE -->
+
+    <details class="guide">
+
+        <summary>
+            <i class="bi bi-house-check"></i>
+            Before an Earthquake
+        </summary>
+
+        <div class="guide-content">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-7">
+
+                    <h4>How to Prepare</h4>
+
+                    <ul>
+                        <li>Learn safe places at home and school.</li>
+                        <li>Prepare an emergency kit with necessary supplies.</li>
+                        <li>Secure heavy furniture with adult help.</li>
+                        <li>Practise earthquake safety drills with teachers and family.</li>
+                        <li>Know how to contact your family during an emergency.</li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=700"
+                    alt="Child preparing for an activity">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </details>
+
+
+    <!-- DURING -->
+
+    <details class="guide">
+
+        <summary>
+            <i class="bi bi-shield-check"></i>
+            During an Earthquake
+        </summary>
+
+        <div class="guide-content">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-7">
+
+                    <h4>How to Protect Yourself</h4>
+
+                    <ul>
+                        <li>Drop to your hands and knees.</li>
+                        <li>Cover your head and neck under sturdy furniture if possible.</li>
+                        <li>Hold on until the shaking stops.</li>
+                        <li>Stay away from windows and glass.</li>
+                        <li>If you are outdoors, move to an open area away from buildings and power lines.</li>
+                        <li>Listen to teachers and caregivers.</li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700"
+                    alt="Children in a classroom">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </details>
+
+
+    <!-- AFTER -->
+
+    <details class="guide">
+
+        <summary>
+            <i class="bi bi-people"></i>
+            After an Earthquake
+        </summary>
+
+        <div class="guide-content">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-7">
+
+                    <h4>What to Do Next</h4>
+
+                    <ul>
+                        <li>Stay with your teacher, parent or caregiver.</li>
+                        <li>Watch out for broken glass and damaged areas.</li>
+                        <li>Be prepared for aftershocks.</li>
+                        <li>Follow instructions from trusted adults.</li>
+                        <li>Do not enter damaged buildings.</li>
+                        <li>Ask an adult for help if someone is injured.</li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=700"
+                    alt="Children learning together">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </details>
+
+
+    <!-- IMPORTANT REMINDERS -->
+
+    <details class="guide">
+
+        <summary>
+            <i class="bi bi-lightbulb"></i>
+            Important Safety Reminders
+        </summary>
+
+        <div class="guide-content">
+
+            <h4>Always Remember!</h4>
+
+            <ul>
+                <li>Stay calm and avoid panicking.</li>
+                <li>Never use lifts during an earthquake.</li>
+                <li>Do not run outside while the ground is shaking.</li>
+                <li>Never touch fallen electrical wires.</li>
+                <li>Always follow official safety instructions.</li>
+            </ul>
+
+        </div>
+
+    </details>
+
+
+    <!-- FOOTER -->
+
+         <footer class="caresafe-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h3></h3>
+                    <p>Helping vulerable communities stay safe through earthquake preparedness, awareness , and emergency support. </p>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="homepage01.html">Home</a></li>
+                        <li><a href="safety_tips.html">Safety Tips</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Prepared</h5>
+                    <p>Be informed. Be prepared. Stay safe.</p>
+                    <a href="homepage01.html" class="footer-btn">Explore</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 BrainCells | Earthquake Safety Awareness</p>
+                <p>Designed by Year 9 Students</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+   
+
+    <!-- BOOTSTRAP JS FOR NAVBAR ONLY -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
